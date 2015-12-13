@@ -31,9 +31,9 @@
 
     <parent>
         <groupId>org.apache.brooklyn</groupId>
-        <artifactId>brooklyn-parent</artifactId>
+        <artifactId>brooklyn-ui</artifactId>
         <version>0.9.1-SNAPSHOT</version><!-- BROOKLYN_VERSION -->
-        <relativePath>../../parent/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <properties>
@@ -44,7 +44,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
+<!--         <dependency>
             <groupId>org.apache.brooklyn</groupId>
             <artifactId>brooklyn-api</artifactId>
             <version>${project.version}</version>
@@ -59,12 +59,6 @@
         <dependency>
             <groupId>org.apache.brooklyn</groupId>
             <artifactId>brooklyn-utils-common</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.brooklyn</groupId>
-            <artifactId>brooklyn-rest-server</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
@@ -85,25 +79,29 @@
             <artifactId>brooklyn-locations-jclouds</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
+            <version>${jetty.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -167,7 +165,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+<!--             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>${maven-dependency-plugin.version}</version>
                 <executions>
@@ -192,7 +190,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
